@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/profile'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     passwords: 'users/passwords',
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
   }
 
   resources :packages
-
+  resources :cars
   root 'welcome#index'
+  get 'profile/', to: 'users#profile', as: 'profile'
 end
