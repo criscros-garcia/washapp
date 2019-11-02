@@ -10,7 +10,11 @@
   </head>
 
   <body>
-    <%= render 'layouts/devise_alerts' %>
-    <%= yield %>
+    <%= render 'shared/navbar' %>
+    <div class="container">
+      <%= render 'shared/messages' %>
+      <%= yield %>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>
