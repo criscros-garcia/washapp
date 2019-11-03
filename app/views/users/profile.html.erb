@@ -1,2 +1,31 @@
-<h1>Users#profile</h1>
-<p>Find me in app/views/users/profile.html.erb</p>
+<h1>Your profile</h1>
+
+<div class="info">
+  <p><%= @user.name %></p>
+  <p><%= @user.phone %></p>
+  <p><%= @user.address %></p>
+  <p><%= @user.reputation %></p>
+  <p><%= @user.role %></p>
+  <p><%= @user.available %></p>
+</div>
+
+<% if @user.client? %>
+  <ul class="client-cars">
+    <% @user.cars.each do |car| %>
+      <li><%=  car %></li>
+    <% end %>
+    <%= link_to 'Edita la info de tu carro', edit_car_path(:car)  %>
+  </ul>
+
+  <%= link_to 'Solicita tu servicio', new_request_path %>
+<% end %>
+
+<% if @user.partner? %>
+  <ul class="requests">
+    <% @requests.each do |request| %>
+      <li><%= p request %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= link_to 'Edita tu perfil', edit_user_registration_path %>
