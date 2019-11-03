@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html id="devise-html">
+  <head>
+    <title>Washapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body id="devise-body">
+    <%= render 'shared/navbar' %>
+    <div class="container devise-container">
+      <div class="row">
+        <div class="col-md-8 col-offset-md-2">
+          <%= render 'shared/messages' %>
+          <div class="card bg-light">
+            <div class="card-body">
+              <div class="card bg-light p-2">
+                <%= yield %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= render 'shared/footer' %>
+  </body>
+</html>
