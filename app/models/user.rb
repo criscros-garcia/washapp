@@ -5,9 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :cars
+  has_many :requests
 
-  enum role: %i[admin client partner]
-  
+  enum role: %i[client partner]
+
   after_initialize do
     self.role ||= :client if new_record?
   end
