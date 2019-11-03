@@ -4,8 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  enum role: %i[admin client partner]
+  has_many :cars
 
+  enum role: %i[admin client partner]
+  
   after_initialize do
     self.role ||= :client if new_record?
   end
