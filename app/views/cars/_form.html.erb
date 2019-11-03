@@ -1,36 +1,40 @@
-<%= form_with(model: @car, local: true) do |form| %>
-  <% if @car.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
+<div class="d-flex justify-content-center">
+  <div>
+    <%= form_with(model: @car, local: true) do |form| %>
+    <% if @car.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
 
-      <ul>
-      <% @car.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @car.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.select :size, Car.sizes.keys.map { |size| [size, size] } %>
     </div>
-  <% end %>
- 
-  <div class="field">
-    <%= form.select :size, Car.sizes.keys.map { |size| [size, size] } %>
-  </div>
 
-  <div class="field">
-    <%= form.label :brand %>
-    <%= form.text_field :brand %>
-  </div>
+    <div class="field">
+      <%= form.label :brand %>
+      <%= form.text_field :brand, class:'form-control',:required => true%>
+    </div>
 
-  <div class="field">
-    <%= form.label :model %>
-    <%= form.text_field :model %>
-  </div>
+    <div class="field">
+      <%= form.label :model %>
+      <%= form.text_field :model, class:'form-control', :required => true %>
+    </div>
 
-  <div class="field">
-    <%= form.label :color %>
-    <%= form.text_field :color %>
-  </div>
+    <div class="field">
+      <%= form.label :color %>
+      <%= form.text_field :color , class:'form-control', :required => true %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+    <% end %>
   </div>
-<% end %>
+</div>
