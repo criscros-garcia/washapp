@@ -10,6 +10,17 @@ Wash app web application lets you request a car wash service from home. \
 Users register to the plattform as a client or business-partner. \
 A client is able to request a car wash service.
 
+## Account details
+### As a client
+
+email:    hacky@correo.com
+password: asdfgh
+
+### As a bussiness partner
+
+email:    partner@correo.com
+password: asdfgh
+
 ## FEATURES
 
 ### Clients
