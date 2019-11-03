@@ -1,7 +1,44 @@
 @import "bootstrap";
-.jump_card{
+.jump_card {
   box-shadow:2px 3px 6px 0 rgba(0,0,0,0.56);
 }
-body{
+body {
   background: linear-gradient(to bottom, #ffffff -0%, #66ccff 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+.jumbotron-color {
+  background-color: #65C7F7;
+}
+
+.text-container {
+  background-color: #ffffff;
+}
+
+.carousel-item img {
+  height: 600px !important;
+}
+
+.container-footer {
+  text-align: center;
+  background: #1eadf5;
+  color: white;
+  font-size: .9rem;
+}
+
+.container-footer .links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.container-footer .links a {
+  color:white;
+  margin: 0 .7rem;
+  transition: all .3s ease;
+}
+
