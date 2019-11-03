@@ -2,10 +2,26 @@
 .jump_card {
   box-shadow:2px 3px 6px 0 rgba(0,0,0,0.56);
 }
-body {
-  background: linear-gradient(to bottom, #ffffff -0%, #66ccff 100%);
+
+
+html{
+  min-height: 100%;
+  height: 100%;
+  margin-top: 90px;
+}
+
+body{
+  background-color: rgba(#66ccff, 0.7);
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.devise-container{
+  flex: 1;
 }
 
 .jumbotron-color {
@@ -25,6 +41,8 @@ body {
   background: #1eadf5;
   color: white;
   font-size: .9rem;
+  bottom: 0;
+  width: 100%;
 }
 
 .container-footer .links {
@@ -33,7 +51,7 @@ body {
   justify-content: center;
   margin: 0;
   padding: 0;
- 
+
 }
 
 .container-footer .links a {
@@ -41,4 +59,3 @@ body {
   margin: 0 .7rem;
   transition: all .3s ease;
 }
-
